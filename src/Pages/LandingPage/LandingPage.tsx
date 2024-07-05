@@ -2,8 +2,9 @@ import image from "@assets/landing/image3.webp";
 import image1 from "@assets/landing/image4.webp";
 import image2 from "@assets/landing/image5.webp";
 import image3 from "@assets/landing/image6.webp";
-import Service from "@Components/LandingPage/Service";
+import Offer from "@Components/LandingPage/Offer";
 import ServiceCart from "@Components/LandingPage/ServiceCart";
+import Terms from "@Components/LandingPage/Terms";
 import React from "react";
 
 const LandingPage: React.FC = () => {
@@ -53,22 +54,13 @@ const LandingPage: React.FC = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-2 pb-[30px]">
-        <h1 className="font-fjalla text-5xl font-semibold">
-          Services We Offer
-        </h1>
-        <div>
-          Often it’s not enough to just get your event’s food catered; you might
-          need a host of other supports like waiters/servers, chafing dishes,
-          cutlery and so on. <p className="mt-5"> We can provide them all.</p>
-        </div>
-      </div>
+      <Offer />
       <div className="pt-[30px] grid grid-cols-3 gap-y-16 gap-x-9 h-full">
         {cartData.map((data) => (
           <ServiceCart data={data} />
         ))}
       </div>
-      <Service />
+      <Terms />
     </div>
   );
 };

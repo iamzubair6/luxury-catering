@@ -1,6 +1,5 @@
-const Service = () => {
-  return (
-    <div className="pt-10">
+const Terms = () => {
+  return <div className="pt-10">
       <h2 className="text-3xl font-bold mb-4 font-fjalla">TERMS</h2>
       <ol className="list-decimal list-inside space-y-4">
         <li>
@@ -17,8 +16,7 @@ const Service = () => {
           executed such orders as well. So rest assured!
         </li>
       </ol>
-    </div>
-  );
+    </div>;
 };
 
-export default Service;
+export default Terms;
