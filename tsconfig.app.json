@@ -36,6 +36,12 @@
       "@Pages/*": [
         "src/Pages/*"
       ],
+      "@Lib/*": [
+        "src/Lib/*"
+      ],
+      "@Layout/*": [
+        "src/Layout/*"
+      ],
     }
   },
   "include": [

@@ -1,11 +1,12 @@
-// const LandingPage = lazy(() => import("@Pages/LandingPage/LandingPage"));
-import LandingPage from "@Pages/LandingPage/LandingPage";
+import MainLayout from "@Layout/MainLayout";
+import { lazy, Suspense } from "react";
 import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import MainLayout from "./Layout/MainLayout";
+//page imports
+const LandingPage = lazy(() => import("@Pages/LandingPage/LandingPage"));
 
 function App() {
   const routes = createBrowserRouter([
@@ -17,6 +18,10 @@ function App() {
           path: "",
           element: <LandingPage />,
         },
+        {
+          path: "about",
+          element: <LandingPage />,
+        },
       ],
     },
     {
@@ -24,7 +29,11 @@ function App() {
       element: <Navigate to="/" />,
     },
   ]);
-  return <RouterProvider router={routes} />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider router={routes} />
+    </Suspense>
+  );
 }
 
 export default App;

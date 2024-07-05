@@ -13,6 +13,8 @@ export default defineConfig({
       "@assets": "/src/assets/",
       "@Components": "/src/Components/",
       "@Pages": "/src/Pages/",
+      "@Layout": "/src/Layout/",
+      "@Lib": "/src/Lib/",
     },
   },
 });
