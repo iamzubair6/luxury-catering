@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: [
+  content: [
+    "./index.html",
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-     container: {
+    container: {
       center: true,
       padding: "2rem",
       screens: {
@@ -23,8 +24,8 @@ export default {
       //   },
       // },
       fontFamily: {
-       baskerville: ['"Libre Baskerville"', 'serif'],
-       fjalla:['"Fjalla One"', 'sans-serif'], 
+        baskerville: ['"Libre Baskerville"', "serif"],
+        fjalla: ['"Fjalla One"', "sans-serif"],
       },
       // backgroundImage: (theme) => ({
       //   "hero-pattern": "url('/images/hero-pattern.svg')",
@@ -33,5 +34,4 @@ export default {
     },
   },
   plugins: [],
-}
-
+};
