@@ -3,6 +3,7 @@ import image1 from "@assets/landing/image4.webp";
 import image2 from "@assets/landing/image5.webp";
 import image3 from "@assets/landing/image6.webp";
 import Offer from "@Components/LandingPage/Offer";
+import Review from "@Components/LandingPage/Review";
 import ServiceCart from "@Components/LandingPage/ServiceCart";
 import Terms from "@Components/LandingPage/Terms";
 import React from "react";
@@ -61,6 +62,7 @@ const LandingPage: React.FC = () => {
         ))}
       </div>
       <Terms />
+      <Review />
     </div>
   );
 };

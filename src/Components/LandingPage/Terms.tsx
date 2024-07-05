@@ -1,6 +1,7 @@
 const Terms = () => {
-  return <div className="pt-10">
-      <h2 className="text-3xl font-bold mb-4 font-fjalla">TERMS</h2>
+  return (
+    <div className="mt-16 pb-4">
+      <h2 className="text-5xl font-semibold mb-8 font-fjalla">TERMS</h2>
       <ol className="list-decimal list-inside space-y-4">
         <li>
           Prices of these additional supports will vary depending on which
@@ -16,7 +17,8 @@ const Terms = () => {
           executed such orders as well. So rest assured!
         </li>
       </ol>
-    </div>;
+    </div>
+  );
 };
 
 export default Terms;
