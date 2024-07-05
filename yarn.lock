@@ -503,6 +503,13 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
+"@types/tailwindcss@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@types/tailwindcss/-/tailwindcss-3.1.0.tgz#1185e4b3437c6e0f19d6cc8cd42738a94fd7b64f"
+  integrity sha512-JxPzrm609hzvF4nmOI3StLjbBEP3WWQxDDJESqR1nh94h7gyyy3XSl0hn5RBMJ9mPudlLjtaXs5YEBtLw7CnPA==
+  dependencies:
+    tailwindcss "*"
+
 "@typescript-eslint/eslint-plugin@^7.13.1":
   version "7.15.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-7.15.0.tgz#8eaf396ac2992d2b8f874b68eb3fcd6b179cb7f3"
@@ -2558,7 +2565,7 @@ tailwind-merge@^2.3.0:
   dependencies:
     "@babel/runtime" "^7.24.1"
 
-tailwindcss@^3.4.4:
+tailwindcss@*, tailwindcss@^3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.4.tgz#351d932273e6abfa75ce7d226b5bf3a6cb257c05"
   integrity sha512-ZoyXOdJjISB7/BcLTR6SEsLgKtDStYyYZVLsUtWChO4Ps20CBad7lfJKVDiejocV4ME1hLmyY0WJE3hSDcmQ2A==
@@ -2712,7 +2719,7 @@ typed-array-length@^1.0.6:
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
 
-typescript@^5.2.2:
+typescript@^5.5.3:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.3.tgz#e1b0a3c394190838a0b168e771b0ad56a0af0faa"
   integrity sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==
