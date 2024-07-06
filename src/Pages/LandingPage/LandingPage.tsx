@@ -2,10 +2,10 @@ import image from "@assets/landing/image3.webp";
 import image1 from "@assets/landing/image4.webp";
 import image2 from "@assets/landing/image5.webp";
 import image3 from "@assets/landing/image6.webp";
-import Offer from "@Components/LandingPage/Offer";
 import Review from "@Components/LandingPage/Review";
 import ServiceCart from "@Components/LandingPage/ServiceCart";
 import Terms from "@Components/LandingPage/Terms";
+import Offer from "@Components/Shared/Offer";
 import SEO from "@Components/Shared/SEO";
 import React from "react";
 
@@ -57,7 +57,13 @@ const LandingPage: React.FC = () => {
   return (
     <div>
       <SEO title={"Luxury Catering"} />
-      <Offer />
+      <Offer
+        title="Services We Offer"
+        subTitle=" Often it’s not enough to just get your event’s food catered; you might
+        need a host of other supports like waiters/servers, chafing dishes,
+        cutlery and so on."
+        nestedSubTitle="We can provide them all."
+      />
       <div className="pt-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-9 h-full">
         {cartData.map((data) => (
           <div key={data?.id}>

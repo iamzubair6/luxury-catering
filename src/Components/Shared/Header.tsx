@@ -3,9 +3,11 @@ import { useEffect } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import { Nav, NavLink } from "./Nav";
 
 const Header = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const menuToggle = document.getElementById("menu-toggle");
     const menuClose = document.getElementById("menu-close");
@@ -32,7 +34,12 @@ const Header = () => {
   return (
     <div>
       <div className="static flex items-center py-[20px] px-[30px] justify-between">
-        <img src={logo} alt="" className="h-[44px] w-[200px]" />
+        <img
+          src={logo}
+          alt=""
+          className="h-[44px] w-[200px] cursor-pointer"
+          onClick={() => navigate("/")}
+        />
         <div className="lg:hidden">
           <button id="menu-toggle" className="text-black focus:outline-none">
             {/* <svg
@@ -78,7 +85,12 @@ const Header = () => {
         className="lg:hidden fixed inset-0 bg-[#f3ede7] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out"
       >
         <div className="flex justify-between items-center py-[20px] px-[30px]">
-          <img src={logo} alt="" className="h-[44px] w-[200px]" />
+          <img
+            src={logo}
+            alt=""
+            className="h-[44px] w-[200px] cursor-pointer"
+            onClick={() => navigate("/")}
+          />
           <button id="menu-close" className="text-black focus:outline-none">
             {/* <svg
               className="w-6 h-6"

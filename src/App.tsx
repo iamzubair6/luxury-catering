@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 //page imports
 const LandingPage = lazy(() => import("@Pages/LandingPage/LandingPage"));
+const Menu = lazy(() => import("@Pages/Menu/Menu"));
 
 function App() {
   const routes = createBrowserRouter([
@@ -20,8 +21,8 @@ function App() {
           element: <LandingPage />,
         },
         {
-          path: "about",
-          element: <LandingPage />,
+          path: "menu",
+          element: <Menu />,
         },
       ],
     },
