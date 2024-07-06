@@ -1,3 +1,4 @@
+import Loader from "@Components/Shared/Loader";
 import MainLayout from "@Layout/MainLayout";
 import { lazy, Suspense } from "react";
 import {
@@ -30,7 +31,7 @@ function App() {
     },
   ]);
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <RouterProvider router={routes} />
     </Suspense>
   );

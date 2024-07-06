@@ -1,6 +1,8 @@
 import logo from "@assets/brand-logo/logo.svg";
 import { useEffect } from "react";
+import { CiMenuFries } from "react-icons/ci";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
 import { Nav, NavLink } from "./Nav";
 
 const Header = () => {
@@ -33,7 +35,7 @@ const Header = () => {
         <img src={logo} alt="" className="h-[44px] w-[200px]" />
         <div className="lg:hidden">
           <button id="menu-toggle" className="text-black focus:outline-none">
-            <svg
+            {/* <svg
               className="w-6 h-6"
               fill="none"
               stroke="currentColor"
@@ -46,7 +48,8 @@ const Header = () => {
                 strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               ></path>
-            </svg>
+            </svg> */}
+            <CiMenuFries size={24} />
           </button>
         </div>
         <Nav className="hidden lg:flex space-x-6">
@@ -77,7 +80,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-[20px] px-[60px]">
           <img src={logo} alt="" className="h-[44px] w-[200px]" />
           <button id="menu-close" className="text-black focus:outline-none">
-            <svg
+            {/* <svg
               className="w-6 h-6"
               fill="none"
               stroke="currentColor"
@@ -90,7 +93,8 @@ const Header = () => {
                 strokeWidth="2"
                 d="M6 18L18 6M6 6l12 12"
               ></path>
-            </svg>
+            </svg> */}
+            <IoMdClose size={24} />
           </button>
         </div>
         <nav className="flex flex-col items-start space-y-6 py-4 px-8">
