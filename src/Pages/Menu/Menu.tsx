@@ -3,6 +3,7 @@ import Terms from "@Components/LandingPage/Terms";
 import LiveMenu from "@Components/Menu/LiveMenu";
 import MenuCart from "@Components/Menu/MenuCart";
 import Offer from "@Components/Shared/Offer";
+import SEO from "@Components/Shared/SEO";
 import menu1 from "@assets/menu/menu1.jpg";
 import menu2 from "@assets/menu/menu2.jpg";
 import menu3 from "@assets/menu/menu3.png";
@@ -38,6 +39,7 @@ const Menu = () => {
   ];
   return (
     <div>
+      <SEO title="OUR MENU" />
       <Offer
         title="EXPLORE OUR MENU"
         subTitle="Whether you want Deshi, Indian, Chinese or Continental cuisine, we have a rich selection of delectable items to complement your event. From finger foods to main dishes to desserts."
