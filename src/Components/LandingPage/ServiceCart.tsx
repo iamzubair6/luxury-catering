@@ -2,7 +2,6 @@ import React from "react";
 
 type ServiceCartProps = {
   data: {
-    id: number;
     title: string;
     description: string;
     image: string;
@@ -10,7 +9,7 @@ type ServiceCartProps = {
 };
 const ServiceCart: React.FC<ServiceCartProps> = ({ data }) => {
   return (
-    <div key={data.id} className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col gap-4 items-center">
       <img
         className="w-full h-[354px] object-cover"
         src={data.image}

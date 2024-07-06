@@ -1,9 +1,10 @@
-import { LuLoader2 } from "react-icons/lu";
+import loading from "@Utils/Loading.json";
+import Lottie from "lottie-react";
 
 const Loader = () => {
   return (
     <div className="flex justify-center flex-col items-center h-screen">
-      <LuLoader2 className="size-24 animate-spin" />
+      <Lottie animationData={loading} style={{ height: 400, width: 400 }} />
     </div>
   );
 };

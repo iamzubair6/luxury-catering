@@ -6,6 +6,7 @@ import Offer from "@Components/LandingPage/Offer";
 import Review from "@Components/LandingPage/Review";
 import ServiceCart from "@Components/LandingPage/ServiceCart";
 import Terms from "@Components/LandingPage/Terms";
+import SEO from "@Components/Shared/SEO";
 import React from "react";
 
 const LandingPage: React.FC = () => {
@@ -55,10 +56,13 @@ const LandingPage: React.FC = () => {
   ];
   return (
     <div>
+      <SEO title={"Luxury Catering"} />
       <Offer />
       <div className="pt-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-9 h-full">
         {cartData.map((data) => (
-          <ServiceCart data={data} />
+          <div key={data?.id}>
+            <ServiceCart data={data} />
+          </div>
         ))}
       </div>
       <Terms />

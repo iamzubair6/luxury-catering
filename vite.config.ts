@@ -15,6 +15,7 @@ export default defineConfig({
       "@Pages": "/src/Pages/",
       "@Layout": "/src/Layout/",
       "@Lib": "/src/Lib/",
+      "@Utils": "/src/Utils/",
     },
   },
 });
