@@ -56,7 +56,7 @@ const LandingPage: React.FC = () => {
   return (
     <div>
       <Offer />
-      <div className="pt-[30px] grid grid-cols-3 gap-y-16 gap-x-9 h-full">
+      <div className="pt-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-9 h-full">
         {cartData.map((data) => (
           <ServiceCart data={data} />
         ))}

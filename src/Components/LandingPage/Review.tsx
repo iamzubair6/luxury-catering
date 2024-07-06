@@ -4,8 +4,10 @@ import user2 from "@assets/landing/user3.jpeg";
 const Review = () => {
   return (
     <div className="mt-16 mb-4">
-      <h2 className="text-5xl font-semibold  mb-8 font-fjalla">REVIEWS</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <h2 className="text-4xl md:text-5xl font-semibold  mb-8 font-fjalla">
+        REVIEWS
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
           <img
             src={user2}

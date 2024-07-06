@@ -1,7 +1,9 @@
 const Offer = () => {
   return (
-    <div className="grid grid-cols-2 pb-[30px]">
-      <h1 className="font-fjalla text-5xl font-semibold">Services We Offer</h1>
+    <div className="grid grid-col-1 md:grid-cols-2 pb-[30px] gap-8">
+      <h1 className="font-fjalla text-4xl md:text-5xl font-semibold">
+        Services We Offer
+      </h1>
       <div>
         Often it’s not enough to just get your event’s food catered; you might
         need a host of other supports like waiters/servers, chafing dishes,

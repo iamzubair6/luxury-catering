@@ -1,7 +1,9 @@
 const Terms = () => {
   return (
     <div className="mt-16 pb-4">
-      <h2 className="text-5xl font-semibold mb-8 font-fjalla">TERMS</h2>
+      <h2 className="text-4xl md:text-5xl font-semibold mb-8 font-fjalla">
+        TERMS
+      </h2>
       <ol className="list-decimal list-inside space-y-4">
         <li>
           Prices of these additional supports will vary depending on which
