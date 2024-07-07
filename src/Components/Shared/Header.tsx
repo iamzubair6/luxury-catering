@@ -24,13 +24,16 @@ const Header = () => {
     menuToggle?.addEventListener("click", openMenu);
     menuClose?.addEventListener("click", closeMenu);
 
+    const navLinks = mobileMenu?.querySelectorAll("a");
+    navLinks?.forEach((link) => link.addEventListener("click", closeMenu));
+
     // Cleanup event on component unmount
     return () => {
       menuToggle?.removeEventListener("click", openMenu);
       menuClose?.removeEventListener("click", closeMenu);
+      navLinks?.forEach((link) => link.removeEventListener("click", closeMenu));
     };
   }, []);
-
   return (
     <div>
       <div className="static flex items-center py-[20px] px-[30px] justify-between">
@@ -86,6 +89,7 @@ const Header = () => {
       >
         <div className="flex justify-between items-center py-[20px] px-[30px]">
           <img
+            id="menu-close"
             src={logo}
             alt=""
             className="h-[44px] w-[200px] cursor-pointer"
