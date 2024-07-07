@@ -1,5 +1,5 @@
 import logo from "@assets/brand-logo/logo.svg";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
@@ -8,10 +8,12 @@ import { Nav, NavLink } from "./Nav";
 
 const Header = () => {
   const navigate = useNavigate();
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const menuToggle = document.getElementById("menu-toggle");
     const menuClose = document.getElementById("menu-close");
-    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenu = mobileMenuRef.current;
 
     const openMenu = () => {
       mobileMenu?.classList.remove("-translate-x-full");
@@ -21,10 +23,10 @@ const Header = () => {
       mobileMenu?.classList.add("-translate-x-full");
     };
 
+    const navLinks = mobileMenu?.querySelectorAll("a");
+
     menuToggle?.addEventListener("click", openMenu);
     menuClose?.addEventListener("click", closeMenu);
-
-    const navLinks = mobileMenu?.querySelectorAll("a");
     navLinks?.forEach((link) => link.addEventListener("click", closeMenu));
 
     // Cleanup event on component unmount
@@ -34,6 +36,7 @@ const Header = () => {
       navLinks?.forEach((link) => link.removeEventListener("click", closeMenu));
     };
   }, []);
+
   return (
     <div>
       <div className="static flex items-center py-[20px] px-[30px] justify-between">
@@ -45,20 +48,6 @@ const Header = () => {
         />
         <div className="lg:hidden">
           <button id="menu-toggle" className="text-black focus:outline-none">
-            {/* <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg> */}
             <CiMenuFries size={24} />
           </button>
         </div>
@@ -84,32 +73,21 @@ const Header = () => {
         </div>
       </div>
       <div
+        ref={mobileMenuRef}
         id="mobile-menu"
         className="lg:hidden fixed inset-0 bg-[#f3ede7] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out"
       >
-        <div className="flex justify-between items-center py-[20px] px-[30px]">
+        <div
+          id="menu-close"
+          className="flex justify-between items-center py-[20px] px-[30px]"
+        >
           <img
-            id="menu-close"
             src={logo}
             alt=""
             className="h-[44px] w-[200px] cursor-pointer"
             onClick={() => navigate("/")}
           />
-          <button id="menu-close" className="text-black focus:outline-none">
-            {/* <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg> */}
+          <button className="text-black focus:outline-none">
             <IoMdClose size={24} />
           </button>
         </div>
