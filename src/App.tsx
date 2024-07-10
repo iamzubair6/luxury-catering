@@ -21,7 +21,7 @@ function App() {
           element: <LandingPage />,
         },
         {
-          path: "menudddd",
+          path: "menu",
           element: <Menu />,
         },
       ],
