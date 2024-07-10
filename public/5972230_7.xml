@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns="https://luxury-catering.vercel.app/sitemap">
+<url>
+	<loc>https://luxury-catering.vercel.app/</loc>
+	<lastmod>2024-07-10T11:52:39+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://luxury-catering.vercel.app/menu</loc>
+	<lastmod>2024-07-10T11:52:39+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://luxury-catering.vercel.app/service</loc>
+	<lastmod>2024-07-10T11:52:39+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://luxury-catering.vercel.app/gallery</loc>
+	<lastmod>2024-07-10T11:52:39+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://luxury-catering.vercel.app/about</loc>
+	<lastmod>2024-07-10T11:52:39+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://luxury-catering.vercel.app/contact</loc>
+	<lastmod>2024-07-10T11:52:39+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>
